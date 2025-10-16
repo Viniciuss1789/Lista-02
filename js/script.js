@@ -203,3 +203,129 @@ function ex12() {
     }
 }
 btnEx12.addEventListener('click', ex12)
+
+function ex13() {
+    let idade = parseInt(prompt("Digite sua idade:"));
+    let sexo = prompt("Digite seu sexo (M para masculino ou F para feminino):");
+    sexo = sexo.toUpperCase();
+
+    if (sexo === "M") {
+        if (idade >= 65) {
+            alert("Você pode se aposentar.");
+        } else {
+            alert("Você ainda não pode se aposentar.");
+        }
+    } else if (sexo === "F") {
+        if (idade >= 60) {
+            alert("Você pode se aposentar.");
+        } else {
+            alert("Você ainda não pode se aposentar.");
+        }
+    } else {
+        alert("Sexo inválido. Digite 'M' para masculino ou 'F' para feminino.");
+    }
+}
+btnEx13.addEventListener('click', ex13)
+
+function ex14() {
+    let peso = parseFloat(prompt("Digite seu peso : "))
+    let altura = parseFloat(prompt("Digite a sua altura : "))
+
+    let imc = peso / (altura * altura)
+
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imc < 25) {
+        classificacao = "Peso normal";
+    } else if (imc < 30) {
+        classificacao = "Sobrepeso";
+    } else if (imc < 35) {
+        classificacao = "Obesidade grau I";
+    } else if (imc < 40) {
+        classificacao = "Obesidade grau II";
+    } else {
+        classificacao = "Obesidade grau III";
+    }
+
+    alert(`Seu IMC é ${imc.toFixed(2)}\nClassificação: ${classificacao}`);
+}
+btnEx14.addEventListener('click', ex14)
+
+function ex15() {
+    const nome = prompt("Digite o nome do aluno:");
+    const nota = parseFloat(prompt("Digite a nota do aluno:"));
+
+    if (nota >= 7) {
+        alert("Está APROVADO!");
+    } else {
+        alert("Está em RECUPERAÇÃO!");
+    }
+}
+btnEx15.addEventListener('click', ex15)
+
+function ex16() {
+    const quantidade = parseInt(prompt("Digite o número de maçãs compradas:"));
+    let precoPorMaca;
+
+    if (quantidade < 12) {
+        precoPorMaca = 0.50;
+    } else {
+        precoPorMaca = 0.40;
+    }
+
+    const total = quantidade * precoPorMaca;
+
+    alert("Total a pagar: " + total);
+
+}
+btnEx16.addEventListener('click', ex16)
+
+function ex17() {
+    const salarioMinimo = parseFloat(prompt("Digite o valor do salário mínimo (R$):"));
+    const salarioFuncionario = parseFloat(prompt("Digite o salário do funcionário (R$):"));
+
+    const quantidade = salarioFuncionario / salarioMinimo;
+
+    alert("O funcionário recebe: " + quantidade);
+}
+btnEx17.addEventListener('click', ex17)
+
+function ex18() {
+    const nome = prompt("Digite o nome do aluno:");
+    const turno = prompt("Digite o turno (M para Matutino ou V para Vespertino):")
+
+    if (turno === "M") {
+        alert("Bom dia, " + nome);
+    } else if (turno === "V") {
+        alert("Boa tarde, " + nome);
+    }
+}
+btnEx18.addEventListener('click', ex18)
+
+function ex19() {
+    const idade = parseInt(prompt("Digite sua idade:"));
+
+    if (idade >= 18 && idade <= 70) {
+        alert("O voto é OBRIGATÓRIO.");
+    } else if ((idade >= 16 && idade < 18) || idade > 70) {
+        alert("O voto é FACULTATIVO.");
+    } else {
+        alert("Você AINDA NÃO PODE votar.");
+    }
+}
+btnEx19.addEventListener('click', ex19)
+
+function ex20() {
+    const num1 = parseInt(prompt("Digite o primeiro número:"));
+    const num2 = parseInt(prompt("Digite o segundo número:"));
+    const num3 = parseInt(prompt("Digite o terceiro número:"));
+
+    const media = (num1 + num2 + num3) / 3;
+
+    if (media >= 7) {
+        alert("Situação: Aprovado" + media);
+    } else {
+        alert("nSituação: Reprovado" + media);
+    }
+}
+btnEx20.addEventListener('click', ex20)
